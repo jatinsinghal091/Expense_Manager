@@ -1,4 +1,4 @@
-package com.upsideDownDev.expensemanager
+package com.upsideDownDev.expensemanager.presentation
 
 import android.app.Application
 import com.upsideDownDev.expensemanager.di.repositoryModule

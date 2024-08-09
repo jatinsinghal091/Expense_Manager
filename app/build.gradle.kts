@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
+    kotlin("plugin.serialization") version "2.0.10"
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -48,6 +50,9 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    composeCompiler {
+        enableStrongSkippingMode = true
+    }
 
 }
 
@@ -83,4 +88,7 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
+
+    //kotlinx serialization
+    implementation(libs.kotlinx.serialization.json)
 }

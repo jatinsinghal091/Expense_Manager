@@ -1,4 +1,4 @@
-package com.upsideDownDev.expensemanager.ui.theme
+package com.upsideDownDev.expensemanager.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
